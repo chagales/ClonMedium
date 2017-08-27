@@ -1,0 +1,11 @@
+.web-header{
+    background: $color-pacifica;
+    padding: 15px;
+    color: $color-grandmas-pillow;
+    text-align: center;
+    .web-title{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: $font-size-large;
+    }
+}

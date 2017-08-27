@@ -1,0 +1,28 @@
+{
+  "name": "ClonMedium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chagales/ClonMedium.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chagales/ClonMedium/issues"
+  },
+  "homepage": "https://github.com/chagales/ClonMedium#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-html-import": "0.0.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.5.3"
+  }
+}
