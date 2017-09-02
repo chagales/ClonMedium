@@ -32,21 +32,28 @@ gulp.task("default",["html","sass","js"],function(){
     gulp.watch(["src/js/*.js", "src/js/**/*.js"], ["js"]);
 });
 
-//compilar sass
-gulp.task("sass", function() {
-    gulp.src("src/scss/style.scss")//Cargamos el archivo style.scss
-        .pipe(sass().on("error",function(error){
-            return notify().write(error);
-        }))//lo compilamos con gulp-sass
-        .pipe(gulp.dest("dist/"))//guardamos el resultado en carpeta css
-        .pipe(browserSync.stream()) //recargar la pagina
-        .pipe(notify("SaSS Compilado"));
-});  
+// compilar sass
+gulp.task("sass", function(){
+    gulp.src("src/scss/style.scss") // cargamos el archivo style.scss
+        .pipe(sourcemaps.init()) // comienza a capturar los sourcemaps
+        .pipe(sass().on("error", function(error){ // lo compilamos con gulp-sass
+            return notify().write(error); // si ocurre un error, mostramos una notificación
+        }))
+        .pipe(postcss([
+            autoprefixer(), // transforma el CSS dándole compatibilidad a versiones antiguas
+            cssnano()       // comprime/minifca el CSS
+        ]))
+        .pipe(sourcemaps.write("./")) // guarda el sourcemap en la misma carpeta que el CSS
+        .pipe(gulp.dest("dist/")) // guardamos el resultado en la carpeta css
+        .pipe(browserSync.stream()) // recargue el CSS del navegador
+        .pipe(notify("SASS Compilado 🤘🏻")) // muestra notifiación en pantalla
+});
 
 // copiar e importar html
 gulp.task("html", function(){
     gulp.src("src/*.html")
-        .pipe(gulpImport("src/components/")) // reemplaza los @import de los HTML        
+        .pipe(gulpImport("src/components/")) // reemplaza los @import de los HTML
+        .pipe(htmlmin({collapseWhitespace: true})) // minifica el HTML
         .pipe(gulp.dest("dist/"))
         .pipe(browserSync.stream())
         .pipe(notify("HTML importado"));
@@ -71,4 +78,11 @@ gulp.task("js", function(){
         .pipe(gulp.dest("dist/")) // lo guardamos en la carpeta dist
         .pipe(browserSync.stream()) // recargamos el navegador
         .pipe(notify("JS Compilado"));
+});
+
+// tarea que optimiza y crea las imágenes responsive
+gulp.task("img", function(){
+    gulp.src("src/img/*")
+        .pipe(imagemin()) // optimizamos el peso de las imágenes
+        .pipe(gulp.dest("dist/img/"))
 });

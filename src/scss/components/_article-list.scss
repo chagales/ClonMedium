@@ -1,0 +1,23 @@
+.article-list{
+    padding-top: 60px;
+    z-index:-1;
+}
+.card{
+    padding: 5px;
+    max-width: 20rem;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+}
+.title{
+    font-size: $font-size-h4;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.article-alone{
+    background: $color-pacifica;
+    //padding: 5px;
+    //margin: 3px 2px;
+    .cover{
+        width: 100%;
+    }
+}

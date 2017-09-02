@@ -1,0 +1,23 @@
+.web-header-top{
+    z-index:100;
+}
+.web-header {
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+.name-brand{
+    font-family: $title-font-family;
+    font-size: $font-size-h1;
+}
+.navbar-ground{
+    box-sizing: border-box;
+    background: fade-out($color-cheery-pink, 0.15);
+    transition: background 0.5s;
+    &:hover {
+        background: $color-blood;
+    }
+}

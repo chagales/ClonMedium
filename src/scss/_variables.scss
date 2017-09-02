@@ -21,10 +21,17 @@ $color-pacifica: #4ECDC4;
 $color-apple-chic: #C7F464;
 $color-cheery-pink: #FF6B6B;
 $color-grandmas-pillow: #C44D58;
+$color-blood:#8A0707;
 
 //Main components color
 $main-text-color: $color-mighty-slate;
 $links-color: $color-grandmas-pillow;
+
+// Responsive
+$mobile-portrait-width: 375px;
+$mobile-landscape-width: 767px;
+$tablet-portrait-width: $mobile-landscape-width + 1;
+$tablet-landscape-width: 1024px;
 
 
 
