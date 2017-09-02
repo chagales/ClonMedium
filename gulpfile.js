@@ -20,8 +20,8 @@ var imagemin = require("gulp-imagemin");
 //definimos una tarea por defecto
 gulp.task("default",["html","sass","js"],function(){
     console.log("Iniciamos");
-    //Iniciamos el servidor de desarrollo
-    browserSync.init({server:"dist/"});
+    //Iniciamos el servidor de desarrollo    
+    browserSync.init({browser:"chrome",server:"dist/"});
 
     gulp.watch(["src/scss/*.scss","src/scss/**/*.scss"],["sass"]);
 
