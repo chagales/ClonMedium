@@ -1,0 +1,23 @@
+.footer-p{
+    padding-top: 5px;
+}
+
+.footer-mine{    
+    display: inline-block;    
+}
+.footer-title{
+    font-family: $title-font-family;
+    font-size: $font-size-h2;
+    color: $color-mighty-slate;
+    font-style: bold;
+    padding: 0 15px;
+}
+.footer-copyright{
+    font-family: $article-font-family;
+    font-size: $font-size-small;
+}
+.footer-img-mine{
+    float: right;
+    opacity: 0.5;
+    max-width: 7%;
+}
