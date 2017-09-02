@@ -1,9 +1,15 @@
 .footer-p{
-    padding-top: 5px;
+    padding-top: 5px;    
+    //bottom: 0;
+    width: 100%; 
+    clear: left;   
 }
-
 .footer-mine{    
     display: inline-block;    
+}
+.footer-read{
+    //position: fixed;
+    //bottom: 1%;
 }
 .footer-title{
     font-family: $title-font-family;

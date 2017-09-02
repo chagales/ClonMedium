@@ -1,6 +1,7 @@
 .article-list{
     padding-top: 60px;
     z-index:-1;
+    position: relative;
 }
 .card{
     padding: 5px;
@@ -15,6 +16,20 @@
 }
 .article-alone{
     background: $color-pacifica;
+    box-sizing: border-box;
+    width: calc(50% - 10px);
+    float: left;
+    padding: 15px;
+    margin: 10px 5px;
+    height: 240px;
+    max-height: 240px;
+    overflow: hidden;
+    @include if-mobile-landscape {
+        width: calc(25% - 10px);
+    }
+    @include if-desktop {
+        width: calc(20% - 10px);
+    }
     //padding: 5px;
     //margin: 3px 2px;
     .cover{
