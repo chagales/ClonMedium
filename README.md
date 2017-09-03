@@ -6,4 +6,6 @@ $ npm install
 
 And run the development server with:
 
+$ npm run server
+
 $ gulp

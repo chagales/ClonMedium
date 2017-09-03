@@ -1,0 +1,41 @@
+.card-form{
+    padding: 8px;    
+    max-width: 25rem;
+    opacity: 0.9;
+}
+
+.comment-form {
+
+    .ui-status {
+
+        &.error {
+            text-align: center;
+            background-color:$color-cheery-pink;
+            padding: 10px;
+            border-radius: 5px;
+            color: $color-marfil;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        &.loading {
+            text-align: center;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+    }
+
+    &.error .ui-status.error { display: block; }
+    &.loading .ui-status.loading { display: block; }
+
+    @include if-tablet-landscape {
+        .form-control-group {
+            width: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0 5px;
+        }
+    }
+
+}

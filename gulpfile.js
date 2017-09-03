@@ -21,7 +21,7 @@ var imagemin = require("gulp-imagemin");
 gulp.task("default",["html","sass","js"],function(){
     console.log("Iniciamos");
     //Iniciamos el servidor de desarrollo    
-    browserSync.init({browser:"chrome",server:"dist/"});
+    browserSync.init({browser:"chrome",proxy:"http://127.0.0.1:3100/"});
 
     gulp.watch(["src/scss/*.scss","src/scss/**/*.scss"],["sass"]);
 
