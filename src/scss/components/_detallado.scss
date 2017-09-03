@@ -1,0 +1,30 @@
+.detalle-space{
+    padding-top: 60px;    
+}
+.card1{
+    margin: 0 auto;    
+}
+.article-alone1{
+    background: $color-pacifica;
+    box-sizing: border-box;
+    width: auto;
+    float: left;
+    padding: 15px;
+    margin: 10px 5px;     
+    max-height: 1000px;
+    overflow: hidden;
+    @include if-mobile-landscape {
+        width: auto;
+    }
+    @include if-desktop {
+        width: calc(50% - 10px);
+    }
+    //padding: 5px;
+    //margin: 3px 2px;
+    .cover{
+        width: 100%;
+    }
+}
+.parraf{
+    padding:5px;
+}

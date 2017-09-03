@@ -4,11 +4,17 @@
     position: relative;
     min-height: 90vh;
 }
+.article-group{
+    width: auto;
+    margin: 0 auto; // centra el contenedor en el medio de la pantalla        
+        
+}
 .card{
     padding: 5px;
     max-width: 20rem;
+    max-height: 10rem;
     margin: 0 auto; /* Added */
-    float: none; /* Added */
+    float: none; /* Added */    
 }
 .title{
     font-size: $font-size-h4;
@@ -18,22 +24,51 @@
 .article-alone{
     background: $color-pacifica;
     box-sizing: border-box;
-    width: calc(50% - 10px);
+    width: auto;
     float: left;
     padding: 15px;
-    margin: 10px 5px;
-    height: 240px;
-    max-height: 240px;
+    margin: 10px 5px;     
+    max-height: 700px;
     overflow: hidden;
     @include if-mobile-landscape {
-        width: calc(25% - 10px);
+        width: auto;
     }
     @include if-desktop {
-        width: calc(20% - 10px);
+        width: calc(50% - 10px);
     }
     //padding: 5px;
     //margin: 3px 2px;
     .cover{
         width: 100%;
     }
+}
+.article-info{
+    padding-top: 10px;
+}
+.space{
+    display: inline-block;
+    width: 33%;
+}
+.img-circular{
+    width: 50%;
+    border-radius: 50%;
+}
+.like{
+    padding-left: 5px;
+    padding-bottom: 12px;
+}
+.name-user{
+    font-size: $font-size-small;
+}
+.space-comment{    
+    max-width: 20rem;
+    float: right;
+}
+.number-comment{
+    font-size: $font-size-medium;
+    font-style: bold;
+    padding: 5px;
+}
+.time-format{
+    margin-top: 20px;
 }
